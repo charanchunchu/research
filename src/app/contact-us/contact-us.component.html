@@ -33,26 +33,38 @@
         <div class="message-form">
           <div class="container">
             <h4 class="form-title">Send us a Message :</h4>
-            <form>
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
               <div class="row mt-5">
                 <div class="col">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingTextInput1" placeholder="John">
+                    <input type="text" class="form-control" formControlName="name" id="floatingTextInput1" placeholder="John">
                     <label for="floatingTextInput1">Enter Your Name</label>
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('name')?.touched && registrationForm.get('name')?.hasError('required')" >
+                    Name is required.
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingTextInput2" placeholder="Research@gmail.com">
-                    <label for="floatingTextInput2">Enter Your mail</label>
+                    <input type="text" class="form-control" id="floatingTextInput2" formControlName="email" placeholder="Research@gmail.com" aria-describedby="validationServer05Feedback" required>
+                    <label for="floatingTextInput2">Enter Your Email</label>
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.hasError('required')">
+                    Email is required.
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingTextInput2" placeholder="1230456789">
+                    <input type="text" class="form-control" id="floatingTextInput2" formControlName="phone" placeholder="1230456789" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" (input)="onPhoneInput($event)">
                     <label for="floatingTextInput2">Enter Your Number</label>
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('phone')?.touched && registrationForm.get('phone')?.hasError('required')">
+                    Phone number is required.
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('phone')?.hasError('pattern')">
+                    Please enter a valid 10-digit phone number.
                   </div>
                 </div>
                 <div class="col">
@@ -62,11 +74,15 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type Your Message"
+                  <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" placeholder="Type Your Message"
                     rows="6"></textarea>
                 </div>
+                <div class="validate" *ngIf="registrationForm.get('description')?.touched && registrationForm.get('description')?.hasError('required')">
+                  Description is required.
+                </div>
               </div>
-              <button class="btn search-button" type="submit">SEND MESSAGE</button>
+              <!-- <button class="btn search-button" type="submit">SEND MESSAGE</button> -->
+              <button class="btn search-button" type="submit" >SEND MESSAGE</button>
             </form>
           </div>
         </div>
