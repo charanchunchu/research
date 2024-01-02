@@ -218,3 +218,7 @@ img {
     width: 266px;
   }
 }
+.banner-color .row .col{
+  padding-right: calc(var(--bs-gutter-x) * 0.1);
+  padding-left: calc(var(--bs-gutter-x) * 0.1);
+}
