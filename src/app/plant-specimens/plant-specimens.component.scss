@@ -1,0 +1,221 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.privacy-banner {
+  background-image: url("../../assets/Group\ 306.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+.privacy-color {
+  margin-top: 25vh;
+  width: 40%;
+  background: #4348BD 0% 0% no-repeat padding-box;
+  border-radius: 0px 91px 91px 0px;
+  opacity: 1;
+  padding: 10px;
+  padding-left: 10%;
+}
+
+.privacy-text {
+  font: normal normal bold 60px/72px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-size: 48px;
+  margin-right: 32px;
+}
+
+.about-us-heading {
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  text-align: left;
+}
+
+.about-us-pargraph {
+  color: #171151;
+  font-size: 16px;
+}
+
+.banner-color {
+  background-color: #F2F5FA;
+  justify-content: center;
+  padding: 30px;
+}
+
+.address-title {
+  color: #171151;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+}
+
+.contact-sub-title {
+  color: #171151;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.service-line {
+  display: inline-flex;
+  color: #0E63FF;
+}
+
+.line {
+  width: 35px;
+  height: 2px;
+  background-color: #0E63FF;
+  display: flex;
+  margin: 12px 10px 1px 1px;
+}
+
+.img-fluid {
+  width: 60px;
+  height: 60px;
+}
+
+.Service-card-title {
+  color: #171151;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Service-card-more {
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(94, 94, 91);
+}
+
+// bioxlab Gallery card section
+.gallery-heading {
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+#card-area {
+  padding: 50px 0;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  width: 420px;
+  height: 100%;
+}
+
+.box img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.overlay {
+  width: 100%;
+  height: 0;
+  background-color: #0E63FF;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding: 0 40px;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.overlay h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.box:hover .overlay {
+  height: 100%;
+  opacity: 0.8;
+}
+
+.card-para {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.end-title {
+  color: #fff;
+  font-weight: 200;
+  font-size: 28px;
+  margin-top: 12px;
+}
+
+.work-gallery-card-icon {
+  width: 60px;
+  height: 66px;
+  position: absolute;
+  left: 80%;
+  margin-top: -130%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s;
+}
+
+.box:hover .work-gallery-card-icon {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 916px) {
+  .box {
+    margin-inline: auto;
+  }
+}
+
+.hover-img {
+  width: 114px;
+  height: 114px;
+}
+
+.main-heading {
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  text-align: center;
+}
+
+.card-img-top {
+  height: 252px;
+}
+
+img {
+  width: -webkit-fill-available;
+}
+
+@media (min-width: 450px) and (max-width: 1024px) {
+  .privacy-color {
+    width: 68%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 449px) {
+  .privacy-color {
+    width: 86%;
+    padding-left: 0%;
+  }
+
+  .box {
+    width: 266px;
+  }
+}
