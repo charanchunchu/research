@@ -32,6 +32,8 @@
   color: #171151;
   font-size: 40px;
   text-align: left;
+  margin-top: 66px;
+  margin-bottom: 45px;
 }
 
 .about-us-pargraph {
@@ -40,9 +42,9 @@
 }
 
 .banner-color {
-  background-color: #F2F5FA;
+  // background-color: #F2F5FA;
   justify-content: center;
-  padding: 30px;
+  // padding: 30px;
 }
 
 .address-title {
@@ -94,4 +96,22 @@ img {
   .privacy-color {
     width: 68%;
   }
+}
+.about-check-icon {
+  margin-right: 10px;
+}
+.about-us-parg{
+  margin-bottom: 42px;
+}
+.approach{
+  margin-top: 72px;
+  margin-bottom: 60px;
+}
+.about-us-approach{
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 45px;
 }
