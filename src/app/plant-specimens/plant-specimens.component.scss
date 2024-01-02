@@ -192,6 +192,7 @@
   color: #171151;
   font-size: 40px;
   text-align: center;
+  margin-bottom: 42px;
 }
 
 .card-img-top {
@@ -221,4 +222,11 @@ img {
 .banner-color .row .col{
   padding-right: calc(var(--bs-gutter-x) * 0.1);
   padding-left: calc(var(--bs-gutter-x) * 0.1);
+}
+.about-us-heading{
+  margin-top: 60px;
+  margin-bottom: 45px;
+}
+.about-us-parg{
+  margin-bottom: 42px;
 }
