@@ -1232,24 +1232,34 @@ span.red {
   .slider-main {
     width: 0%;
   }
+
   .review-card-parag {
     color: #171151;
     width: 290px;
     height: 66px;
     margin: 20px 60px 42px 14px;
+  }
 }
-}
+
 @media(max-width:341px) {
   .card-carousels {
     width: 256px;
+  }
+
+  .review-card-parag {
+    color: #171151;
+    width: 260px;
+    height: 66px;
+    margin: 24px 60px 86px 14px;
+  }
 }
-.review-card-parag {
-  color: #171151;
-  width: 260px;
-  height: 66px;
-  margin: 24px 60px 86px 14px;
-}
-}
-.removeUnderline{
+
+.removeUnderline {
   text-decoration: none;
+}
+
+@media (min-width: 735px) and (max-width: 745px) {
+  span.red {
+    left: 50%;
+  }
 }
