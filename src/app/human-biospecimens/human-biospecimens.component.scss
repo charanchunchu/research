@@ -78,6 +78,12 @@
   display: flex;
   margin: 12px 10px 1px 1px;
 }
+.biospecimens-human{
+  background-color: #F2F5FA;
+}
+.biospecimens{
+  padding-top: 40px;
+}
 
 .biospecimens-human img {
   width: -webkit-fill-available;
@@ -407,11 +413,12 @@ li {
 }
 
 .Service-card-title {
-  width: 223px;
+  /* width: 229px; */
   height: 15px;
   color: #171151;
   font-weight: 700;
-  text-align: center;
+  /* text-align: center; */
+  padding-left: 32px;
 }
 
 .Service-card-parag {
@@ -429,5 +436,16 @@ li {
 
 .Service-card-more img {
   margin-right: 10px;
+}
+
+// accordions
+.accordion-tabs {
+  height: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.accordion-text p i{
+  padding-right: 10px;
+  padding-top: 8px;
 }
 
