@@ -358,6 +358,8 @@
 .service-line {
   display: inline-flex;
   color: #0E63FF;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .line {
@@ -449,6 +451,7 @@
   color: #FFFFFF;
   font-weight: 700;
   white-space: nowrap;
+  font-size: 26px;
 }
 
 .client-count-center {
@@ -462,6 +465,8 @@
 .reviews-line {
   display: inline-flex;
   color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .lines {
@@ -570,6 +575,7 @@ span.red {
   color: #171151;
   font-size: 40px;
   text-align: left;
+  line-height: 1.2;
 }
 
 .abt-btn-history {
@@ -602,6 +608,7 @@ span.red {
   font-size: 18px;
   font-weight: 600;
   margin: 12px;
+  line-height: 1.4;
 }
 
 .about-us-pargraph {
@@ -803,7 +810,7 @@ span.red {
 }
 
 .cards p {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -991,6 +998,8 @@ span.red {
 .service-line-1 {
   display: inline-flex;
   color: #0E63FF;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media (min-width: 320px) and (max-width: 423px) {
@@ -1007,6 +1016,7 @@ span.red {
   .about-us-heading {
     margin-top: 30px !important;
     margin: 12px;
+    line-height: 1.1;
   }
 
   .down-text-r {
@@ -1022,6 +1032,7 @@ span.red {
   .about-us-heading {
     margin-top: 53px;
     margin: 12px;
+    line-height: 1.1;
   }
 
   span.red {
@@ -1052,6 +1063,7 @@ span.red {
 
   .about-us-heading {
     margin-top: 53px;
+    line-height: 1.1;
   }
 
   span.red {
@@ -1084,6 +1096,7 @@ span.red {
   .about-us-parg,
   .about-us-pargraph {
     margin: 12px;
+    line-height: 1.1;
   }
 
   span.red {

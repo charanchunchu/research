@@ -147,6 +147,8 @@
 .reviews-line {
   display: inline-flex;
   color: #0E63FF;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .lines {
@@ -515,4 +517,8 @@ li {
 
 .bg-gray {
   background-color: #8080801f !important;
+}
+
+.accordion-header {
+  margin-bottom: 0;
 }

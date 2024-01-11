@@ -15,8 +15,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <div class="reviews-line"><span class="lines"></span>Our Team</div>
-              <h3 class="mb-5 Client-review mt-3">Meet Specialist</h3>
+              <div class="reviews-line"><span class="lines"></span>Our Herbs</div>
+              <h3 class="mb-5 Client-review mt-3">Popular Herbs</h3>
             </div>
             <div class="col-md-6">
               <div class="slider text-right" data-slider>
@@ -35,110 +35,20 @@
               </div>
             </div>
           </div>
-          <ul class="slider__track" data-slider-track>
-            <li>
-              <div class="card card-carousels">
-                <img alt="100%x280" src="../../assets/Path 962.jpg">
-                <P class="review-card-title">Cameron Wiliamson</P>
-                <P class="review-title">GENETICE SPECIALIST</P>
-                <P class="review-card-parag">Providing insight-driven transformation to investment banks,
-                  wealth and asset man, exchanges,Finance</P>
-                <div class="card-icons my-4">
-                  <div>
-                    <img src="../../assets/Group 290.svg" alt="">
-                  </div>
-                  <div><img src="../../assets/Group 291.svg" alt=""></div>
-                  <div><img src="../../assets/Group 292.svg" alt=""></div>
-                  <div><img src="../../assets/Group 293.svg" alt=""></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="card card-carousels">
-                <img alt="100%x280" src="../../assets/modern-laboratory-research-scientist-conducts-experiments.jpg">
-                <P class="review-card-title">Savannah Nguyen</P>
-                <P class="review-title">GENETICE SPECIALIST</P>
-                <P class="review-card-parag">Providing insight-driven transformation to investment banks,
-                  wealth and asset man, exchanges,Finance</P>
-                <div class="card-icons my-4">
-                  <div>
-                    <img src="../../assets/Group 290.svg" alt="">
-                  </div>
-                  <div><img src="../../assets/Group 291.svg" alt=""></div>
-                  <div><img src="../../assets/Group 292.svg" alt=""></div>
-                  <div><img src="../../assets/Group 293.svg" alt=""></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="card card-carousels">
-                <img alt="100%x280" src="../../assets/happy-woman-near-microscope-looking-camera.jpg">
-                <P class="review-card-title">Darlene Robertson</P>
-                <P class="review-title">GENETICE SPECIALIST</P>
-                <P class="review-card-parag">Providing insight-driven transformation to investment banks,
-                  wealth and asset man, exchanges,Finance</P>
-                <div class="card-icons my-4">
-                  <div>
-                    <img src="../../assets/Group 290.svg" alt="">
-                  </div>
-                  <div><img src="../../assets/Group 291.svg" alt=""></div>
-                  <div><img src="../../assets/Group 292.svg" alt=""></div>
-                  <div><img src="../../assets/Group 293.svg" alt=""></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="card card-carousels">
-                <img alt="100%x280" src="../../assets/Path 962.jpg">
-                <P class="review-card-title">Cameron Wiliamson</P>
-                <P class="review-title">GENETICE SPECIALIST</P>
-                <P class="review-card-parag">Providing insight-driven transformation to investment banks,
-                  wealth and asset man, exchanges,Finance</P>
-                <div class="card-icons my-4">
-                  <div>
-                    <img src="../../assets/Group 290.svg" alt="">
-                  </div>
-                  <div><img src="../../assets/Group 291.svg" alt=""></div>
-                  <div><img src="../../assets/Group 292.svg" alt=""></div>
-                  <div><img src="../../assets/Group 293.svg" alt=""></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="card card-carousels">
-                <img alt="100%x280" src="../../assets/modern-laboratory-research-scientist-conducts-experiments.jpg">
-                <P class="review-card-title">Savannah Nguyen</P>
-                <P class="review-title">GENETICE SPECIALIST</P>
-                <P class="review-card-parag">Providing insight-driven transformation to investment banks,
-                  wealth and asset man, exchanges,Finance</P>
-                <div class="card-icons my-4">
-                  <div>
-                    <img src="../../assets/Group 290.svg" alt="">
-                  </div>
-                  <div><img src="../../assets/Group 291.svg" alt=""></div>
-                  <div><img src="../../assets/Group 292.svg" alt=""></div>
-                  <div><img src="../../assets/Group 293.svg" alt=""></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="card card-carousels">
-                <img alt="100%x280" src="../../assets/happy-woman-near-microscope-looking-camera.jpg">
-                <P class="review-card-title">Darlene Robertson</P>
-                <P class="review-title">GENETICE SPECIALIST</P>
-                <P class="review-card-parag">Providing insight-driven transformation to investment banks,
-                  wealth and asset man, exchanges,Finance</P>
-                <div class="card-icons my-4">
-                  <div>
-                    <img src="../../assets/Group 290.svg" alt="">
-                  </div>
-                  <div><img src="../../assets/Group 291.svg" alt=""></div>
-                  <div><img src="../../assets/Group 292.svg" alt=""></div>
-                  <div><img src="../../assets/Group 293.svg" alt=""></div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <div class="container-fluid nav-icons-container">
+            <div class="nav-icons-wrap CenterIconBox">
+              <ul class="nav-icons-wrap CenterIconBox slider__track" data-slider-track>
+                <li *ngFor="let item of navItems">
+                  <a (click)="openPopup(item)">
+                    <div class="Nav-icons Flights">
+                      <img [src]="item.img" alt="{{ item['botanical-name'] }}">
+                    </div>
+                    <span class="nav-icon-p">{{ item['botanical-name'] }}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -18,6 +18,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PlantPopupComponent } from './plant-specimens/plant-popup/plant-popup.component';
+import { MaterialModule } from './shared/material/material.module';
+import { SharedModule } from './shared/shared.module';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -35,13 +38,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
     ContactUsComponent,
     ServicePageComponent,
+    PlantPopupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

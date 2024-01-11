@@ -1,4 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { PlantPopupComponent } from './plant-popup/plant-popup.component';
+import { NavIconsService } from '../services/nav-icons.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-plant-specimens',
@@ -6,9 +9,17 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./plant-specimens.component.scss']
 })
 export class PlantSpecimensComponent implements AfterViewInit {
+  navItems: any[] = [];
   @ViewChild('slider', { static: true }) slider!: ElementRef<HTMLDivElement>;
 
   private intervalId: any;
+  constructor(private plantSpecimensService: NavIconsService, private dialog: MatDialog) {}
+
+  ngOnInit(): void {
+    this.plantSpecimensService.getPlantSpecimens().subscribe(data => {
+      this.navItems = data;
+    });
+  }
 
   ngAfterViewInit(): void {
     const track = this.slider.nativeElement.querySelector("[data-slider-track]") as HTMLElement;
@@ -72,5 +83,23 @@ export class PlantSpecimensComponent implements AfterViewInit {
     } else {
       next?.classList.remove('hide-arrow');
     }
+  }
+  openPopup(item: any): void {
+    this.dialog.open(PlantPopupComponent, {
+      height: 'auto',
+      width: '50%',
+      data: {
+        title: `Plant ${item.id}: ${item['botanical-name']}`,
+        content: `Description: ${item.description}`,
+        img: item.img,
+        'botanical-name': item['botanical-name'],
+        'family-name': item['family-name'],
+        'common-name': item['common-name'],
+        'part-used': item['part-used'],
+        habitat: item['habitat'],
+        'product-offered': item['product-offered'],
+        uses: item['uses'],
+      },
+    });
   }
 }
