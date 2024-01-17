@@ -86,8 +86,6 @@ export class PlantSpecimensComponent implements AfterViewInit {
   }
   openPopup(item: any): void {
     this.dialog.open(PlantPopupComponent, {
-      height: 'auto',
-      width: '50%',
       data: {
         title: `Plant ${item.id}: ${item['botanical-name']}`,
         content: `Description: ${item.description}`,
