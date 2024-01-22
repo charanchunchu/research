@@ -549,8 +549,8 @@ span.red {
   line-height: 0.6em;
   margin-right: 20px;
   text-align: center;
-  width: 326px;
-  height: 326px;
+  width: 290px;
+  height: 290px;
   position: absolute;
   left: 26%;
   transform: translateX(-50%);
@@ -562,6 +562,7 @@ span.red {
   padding-top: 108px;
   padding-bottom: 18px;
   font-family: fantasy;
+  padding-bottom: 36px;
 }
 
 .about-circle-text {
@@ -651,9 +652,9 @@ span.red {
   }
 }
 
-@media (min-width: 2199px) and (max-width: 2784px) {
+@media (min-width: 2198px) and (max-width: 2784px) {
   span.red {
-    left: 38%;
+    left: 36%;
   }
 }
 
@@ -1143,7 +1144,7 @@ span.red {
 
   .num {
     font-size: 118px;
-    padding-top: 72px;
+    padding-top: 80px;
   }
 }
 

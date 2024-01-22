@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PlantPopupComponent } from './plant-specimens/plant-popup/plant-popup.component';
 import { MaterialModule } from './shared/material/material.module';
 import { SharedModule } from './shared/shared.module';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -39,6 +40,7 @@ import { SharedModule } from './shared/shared.module';
     ContactUsComponent,
     ServicePageComponent,
     PlantPopupComponent,
+    ScrollToTopComponent,
   ],
   imports: [
     BrowserModule,
